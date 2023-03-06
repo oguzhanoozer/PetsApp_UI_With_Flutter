@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:kartal/kartal.dart';
+import 'package:pets_app_ui/core/init/theme/app_theme.dart';
+
+import 'feature/home_view.dart';
 
 void main() => runApp(const MyApp());
 
@@ -8,15 +12,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeManager.createTheme(AppThemeLight()),
       title: 'Material App',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Material App Bar'),
-        ),
-        body: const Center(
-          child: Text('Hello World'),
-        ),
-      ),
+      home: HomeView(),
     );
   }
 }
