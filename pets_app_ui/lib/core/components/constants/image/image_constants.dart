@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names
+
 class ImageConstants {
   static ImageConstants? _instance;
   static ImageConstants get instance {
@@ -30,7 +32,7 @@ class ImageConstants {
 
   String img_blur_back = "img_blur_back";
   String img_blur_list = "img_blur_list";
-  String image_aimg_bunniespplePay_large = "img_bunnies";
+  String img_bunnies = "img_bunnies";
   String img_cat = "img_cat";
   String img_cats_active = "img_cats_active";
   String img_cute_baby = "img_cute_baby";
