@@ -5,7 +5,7 @@ class ElevatedButtonWidget extends ElevatedButton {
       {required this.buttonText,
       required this.onPressed,
       required this.buttonColor,
-      required this.buttonSize,
+      this.buttonSize,
       super.key})
       : super(
             onPressed: onPressed,
@@ -20,7 +20,9 @@ class ElevatedButtonWidget extends ElevatedButton {
               ),
             ),
             style: ButtonStyle(
-                fixedSize: MaterialStateProperty.all(buttonSize),
+                fixedSize: buttonSize != null
+                    ? MaterialStateProperty.all(buttonSize)
+                    : null,
                 backgroundColor: MaterialStateProperty.all(buttonColor),
                 shape: MaterialStatePropertyAll<RoundedRectangleBorder>(
                     RoundedRectangleBorder(
@@ -29,5 +31,5 @@ class ElevatedButtonWidget extends ElevatedButton {
   final String buttonText;
   final void Function()? onPressed;
   final Color buttonColor;
-  final Size buttonSize;
+  final Size? buttonSize;
 }

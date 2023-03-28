@@ -31,6 +31,7 @@ class ImageConstants {
   String ic_outlined_social_share = "ic_outlined_social_share";
 
   String img_blur_back = "img_blur_back";
+  String img_back = "img_back";
   String img_blur_list = "img_blur_list";
   String img_bunnies = "img_bunnies";
   String img_cat = "img_cat";

@@ -21,13 +21,17 @@ class StringConstants {
 
   final String userNameOrEmailText = "Username or Email";
 
+  final String passwordText = "Password123!";
+
   final String forgotPasswordText = "Forgot Password?";
 
   final String orLoginWithText = "or login with";
 
   final String signUpText = "Signup";
 
-  final String createNewAccountText = "create new an account";
+  final String signUpSplittedText = "Sign Up";
+
+  final String createNewAccountText = "create new an account ?";
 
   final String createNewAccountWithBigText = "Create new an account";
 
