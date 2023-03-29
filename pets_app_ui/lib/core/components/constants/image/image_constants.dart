@@ -51,6 +51,7 @@ class ImageConstants {
   String img_squirrel = "img_squirrel";
   String img_twitter = "img_twitter";
   String img_your_image = "img_your_image";
+  String img_socials = "img_socials";
 }
 
 extension IconConstantExtension on String {

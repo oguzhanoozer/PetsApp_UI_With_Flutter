@@ -30,7 +30,7 @@ class _LoginViewState extends State<LoginView> {
     return PaddingPageView(
       child: Column(
         children: [
-          AppBarButtonsRowView(),
+          const AppBarButtonsRowView(),
           context.emptySizedHeightBoxLow3x,
           _buildWelcomeText(context),
           _buildSignInText(context),

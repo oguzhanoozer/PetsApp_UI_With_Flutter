@@ -34,8 +34,8 @@ abstract class ThemeManager {
           elevation: 0,
           color: ColorEnum.white.colorPath,
           shape: RoundedRectangleBorder(
-            side: BorderSide(
-                width: 1, color: ColorEnum.genteelLavender.colorPath),
+            // side: BorderSide(
+            //    width: 0, color: ColorEnum.genteelLavender.colorPath),
             borderRadius: BorderRadius.circular(22.0),
           ),
         ),

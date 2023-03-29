@@ -1,9 +1,18 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
+import 'package:kartal/kartal.dart';
 
 import '../../../core/components/constants/image/image_constants.dart';
 
 class AppBarButtonsRowView extends StatelessWidget {
-  const AppBarButtonsRowView({super.key});
+  const AppBarButtonsRowView({
+    Key? key,
+    this.isAddProfileImageHolder = false,
+    this.iconData = false,
+  }) : super(key: key);
+
+  final bool isAddProfileImageHolder;
+  final bool iconData;
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +23,15 @@ class AppBarButtonsRowView extends StatelessWidget {
           decoration: _buildShadowDecoration(),
           child: Image.asset(ImageConstants.instance.img_back.imagePath),
         ),
-        Image.asset(ImageConstants.instance.img_blur_list.imagePath)
+        isAddProfileImageHolder
+            ? Image.asset(
+                ImageConstants.instance.img_your_image.imagePath,
+                height: context.dynamicHeight(0.13),
+              )
+            : const SizedBox.shrink(),
+        Image.asset(!iconData
+            ? ImageConstants.instance.img_blur_list.imagePath
+            : ImageConstants.instance.img_socials.imagePath)
       ],
     );
   }
