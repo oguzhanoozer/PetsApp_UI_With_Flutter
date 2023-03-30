@@ -23,5 +23,6 @@ class CardWidget extends Card {
 
   final Widget childWidget;
   final bool isBorderExist;
+  @override
   final Color? color;
 }

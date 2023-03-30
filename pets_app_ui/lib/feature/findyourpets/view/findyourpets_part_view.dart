@@ -19,8 +19,8 @@ Expanded _buildGridListView(BuildContext context) {
 }
 
 CardWidget _buildItemCard(int index, BuildContext context) {
-  final itemName = "Daniel James";
-  final itemCity = "New York City (2.8 km)";
+  const itemName = "Daniel James";
+  const itemCity = "New York City (2.8 km)";
 
   return CardWidget(
       isBorderExist: true,
@@ -53,8 +53,8 @@ Row _buildCityRow(BuildContext context, String itemCity) {
 }
 
 CardWidget _buildCardItemImage(int index, BuildContext context) {
-  final statusText = "Status: ";
-  final activeText = "Active";
+  const statusText = "Status: ";
+  const activeText = "Active";
 
   return CardWidget(
     isBorderExist: true,
@@ -65,9 +65,9 @@ CardWidget _buildCardItemImage(int index, BuildContext context) {
       child: Stack(
         children: [
           Positioned(
-            child: _buildStatusCard(index, context, statusText, activeText),
             top: 5,
             right: 5,
+            child: _buildStatusCard(index, context, statusText, activeText),
           )
         ],
       ),
@@ -111,28 +111,15 @@ Text _buildStatusText(String statusText, BuildContext context) {
 SizedBox _buildAnimalListView(BuildContext context) {
   return SizedBox(
     height: context.dynamicHeight(0.1),
-    child: ListView(
+    child: ListView.builder(
+      itemCount: FindYourPetsModel.itemList().length,
       scrollDirection: Axis.horizontal,
-      children: [
-        CardWidget(
-          childWidget: Image.asset(ImageConstants.instance.img_dogs.imagePath),
-        ),
-        CardWidget(
+      itemBuilder: (context, index) {
+        return CardWidget(
           childWidget:
-              Image.asset(ImageConstants.instance.img_cats_active.imagePath),
-        ),
-        CardWidget(
-          childWidget:
-              Image.asset(ImageConstants.instance.img_parrots.imagePath),
-        ),
-        CardWidget(
-          childWidget:
-              Image.asset(ImageConstants.instance.img_squirrel.imagePath),
-        ),
-        CardWidget(
-          childWidget: Image.asset(ImageConstants.instance.img_dogs.imagePath),
-        ),
-      ],
+              Image.asset(FindYourPetsModel.itemList()[index].imagePath),
+        );
+      },
     ),
   );
 }

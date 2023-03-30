@@ -14,7 +14,7 @@ class InputTextFieldWidget extends TextFormField {
       super.key})
       : super(
           obscureText: obscureText ?? false,
-          style: TextStyle(
+          style: const TextStyle(
             fontFamily: 'Nunito',
             color: Color(0xff1e2843),
             fontSize: 16,

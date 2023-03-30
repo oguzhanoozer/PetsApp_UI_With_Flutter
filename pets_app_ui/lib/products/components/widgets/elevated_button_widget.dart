@@ -31,6 +31,7 @@ class ElevatedButtonWidget extends ElevatedButton {
                         borderRadius: BorderConstants.circularRadiusNormal))));
 
   final String buttonText;
+  @override
   final void Function()? onPressed;
   final Color buttonColor;
   final Size? buttonSize;

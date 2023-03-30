@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:kartal/kartal.dart';
 
-import '../../core/components/constants/colors/color_constants.dart';
-import '../../core/components/constants/image/image_constants.dart';
-import '../../core/components/constants/text/text_constants.dart';
-import '../../products/components/widgets/elevated_button_widget.dart';
-import '../../products/components/widgets/position_widget.dart';
+import '../../../core/components/constants/colors/color_constants.dart';
+import '../../../core/components/constants/image/image_constants.dart';
+import '../../../core/components/constants/text/text_constants.dart';
+import '../../../products/components/widgets/elevated_button_widget.dart';
+import '../../../products/components/widgets/position_widget.dart';
 
 part 'splash_part_view.dart';
 

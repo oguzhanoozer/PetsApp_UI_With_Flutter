@@ -130,7 +130,6 @@ BuildPositionedWidget _buildBlueOvalImage(BuildContext context) {
 
 class _buildImageBox extends StatelessWidget {
   const _buildImageBox({
-    super.key,
     this.height,
     this.width,
     required this.child,

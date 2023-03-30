@@ -25,5 +25,5 @@ enum ColorEnum {
 }
 
 extension ColorPathExtension on ColorEnum {
-  Color get colorPath => HexColor("${this.hexCode}");
+  Color get colorPath => HexColor(hexCode);
 }

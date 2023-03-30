@@ -10,7 +10,7 @@ abstract class ThemeManager {
   static ThemeData createTheme(ITheme theme) => ThemeData(
         textTheme: theme.textTheme.textData,
         inputDecorationTheme: InputDecorationTheme(
-          hintStyle: TextStyle(
+          hintStyle: const TextStyle(
             fontFamily: 'Nunito',
             color: Color(0xff1e2843),
             fontSize: 16,
