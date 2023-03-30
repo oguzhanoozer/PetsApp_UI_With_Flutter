@@ -5,6 +5,7 @@ import 'package:pets_app_ui/feature/splash/splash_view.dart';
 import 'feature/congratulation_view.dart';
 import 'feature/detailpets/detailpets_view.dart';
 import 'feature/findyourpets/findyourpets_view.dart';
+import 'feature/searchpets/searchpets_view.dart';
 import 'feature/sign_up/signup_view.dart';
 
 void main() => runApp(const MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeManager.createTheme(AppThemeLight()),
       title: 'Material App',
-      home: DetailPetsView(),
+      home: SearchPetsView(),
     );
   }
 }

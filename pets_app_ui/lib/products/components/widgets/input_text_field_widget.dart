@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pets_app_ui/core/components/constants/colors/color_constants.dart';
+import 'package:pets_app_ui/products/components/widgets/decoration_constants_view.dart';
+
+import 'border_radius_widget.dart';
 
 class InputTextFieldWidget extends TextFormField {
   InputTextFieldWidget(
@@ -32,9 +35,9 @@ class InputTextFieldWidget extends TextFormField {
       child: Padding(
         padding: const EdgeInsets.only(left: 5, right: 10),
         child: Container(
-          decoration: BoxDecoration(
+          decoration: BoxDecorationConstants(
               color: ColorEnum.peachBud.colorPath,
-              borderRadius: BorderRadius.circular(26)),
+              borderRadius: BorderConstants.circularRadiusNormal),
           child: Padding(
             padding: const EdgeInsets.all(15.0),
             child: Icon(prefixIcon, color: ColorEnum.black.colorPath),

@@ -59,10 +59,9 @@ CardWidget _buildCardItemImage(int index, BuildContext context) {
   return CardWidget(
     isBorderExist: true,
     childWidget: Container(
-      decoration: BoxDecoration(
-        color: ColorEnum.doctor.colorPath,
-        borderRadius: BorderRadius.circular(22.0),
-      ),
+      decoration: BoxDecorationConstants(
+          color: ColorEnum.doctor.colorPath,
+          borderRadius: BorderConstants.circularRadiusLow),
       child: Stack(
         children: [
           Positioned(

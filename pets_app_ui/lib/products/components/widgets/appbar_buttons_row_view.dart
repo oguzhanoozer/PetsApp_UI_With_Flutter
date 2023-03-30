@@ -25,7 +25,7 @@ class AppBarButtonsRowView extends StatelessWidget {
         ),
         isAddProfileImageHolder
             ? Image.asset(
-                ImageConstants.instance.img_your_image.imagePath,
+                ImageConstants.instance.img_your_image_big.imagePath,
                 height: context.dynamicHeight(0.13),
               )
             : const SizedBox.shrink(),

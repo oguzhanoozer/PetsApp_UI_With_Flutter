@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../core/components/constants/colors/color_constants.dart';
+import 'border_radius_widget.dart';
 
 class CardWidget extends Card {
   CardWidget(
@@ -14,8 +15,9 @@ class CardWidget extends Card {
             shape: isBorderExist
                 ? RoundedRectangleBorder(
                     side: BorderSide(
-                        width: 0, color: ColorEnum.genteelLavender.colorPath),
-                    borderRadius: BorderRadius.circular(22.0),
+                        width: isBorderExist ? 1 : 0,
+                        color: ColorEnum.genteelLavender.colorPath),
+                    borderRadius: BorderConstants.circularRadiusLow,
                   )
                 : null);
 
