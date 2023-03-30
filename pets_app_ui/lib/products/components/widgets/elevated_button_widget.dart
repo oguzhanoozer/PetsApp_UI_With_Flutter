@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
+import 'border_radius_widget.dart';
+
 class ElevatedButtonWidget extends ElevatedButton {
   ElevatedButtonWidget(
       {required this.buttonText,
       required this.onPressed,
       required this.buttonColor,
-      required this.buttonSize,
+      this.buttonSize,
       super.key})
       : super(
             onPressed: onPressed,
@@ -20,14 +22,17 @@ class ElevatedButtonWidget extends ElevatedButton {
               ),
             ),
             style: ButtonStyle(
-                fixedSize: MaterialStateProperty.all(buttonSize),
+                fixedSize: buttonSize != null
+                    ? MaterialStateProperty.all(buttonSize)
+                    : null,
                 backgroundColor: MaterialStateProperty.all(buttonColor),
                 shape: MaterialStatePropertyAll<RoundedRectangleBorder>(
                     RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(26)))));
+                        borderRadius: BorderConstants.circularRadiusNormal))));
 
   final String buttonText;
+  @override
   final void Function()? onPressed;
   final Color buttonColor;
-  final Size buttonSize;
+  final Size? buttonSize;
 }

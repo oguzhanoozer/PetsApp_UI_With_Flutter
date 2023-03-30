@@ -31,6 +31,7 @@ class ImageConstants {
   String ic_outlined_social_share = "ic_outlined_social_share";
 
   String img_blur_back = "img_blur_back";
+  String img_back = "img_back";
   String img_blur_list = "img_blur_list";
   String img_bunnies = "img_bunnies";
   String img_cat = "img_cat";
@@ -41,6 +42,7 @@ class ImageConstants {
   String img_heart = "img_heart";
   String img_instagram = "img_instagram";
   String img_like_icon = "img_like_icon";
+  String img_like_icon_big = "img_like_icon_big";
   String img_oval_1 = "img_oval_1";
   String img_oval_2 = "img_oval_2";
   String img_oval_3 = "img_oval_3";
@@ -50,6 +52,8 @@ class ImageConstants {
   String img_squirrel = "img_squirrel";
   String img_twitter = "img_twitter";
   String img_your_image = "img_your_image";
+  String img_your_image_big = "img_your_image_big";
+  String img_socials = "img_socials";
 }
 
 extension IconConstantExtension on String {

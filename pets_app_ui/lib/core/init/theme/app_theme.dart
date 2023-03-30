@@ -10,16 +10,23 @@ abstract class ThemeManager {
   static ThemeData createTheme(ITheme theme) => ThemeData(
         textTheme: theme.textTheme.textData,
         inputDecorationTheme: InputDecorationTheme(
+          hintStyle: const TextStyle(
+            fontFamily: 'Nunito',
+            color: Color(0xff1e2843),
+            fontSize: 16,
+            fontWeight: FontWeight.w700,
+            fontStyle: FontStyle.normal,
+          ),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(26.0),
             borderSide: BorderSide(
-              color: ColorEnum.black.colorPath,
+              color: ColorEnum.genteelLavender.colorPath,
             ),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(26.0),
             borderSide: BorderSide(
-              color: ColorEnum.black.colorPath,
+              color: ColorEnum.genteelLavender.colorPath,
             ),
           ),
         ),
@@ -27,8 +34,8 @@ abstract class ThemeManager {
           elevation: 0,
           color: ColorEnum.white.colorPath,
           shape: RoundedRectangleBorder(
-            side: BorderSide(
-                width: 1, color: ColorEnum.genteelLavender.colorPath),
+            // side: BorderSide(
+            //    width: 0, color: ColorEnum.genteelLavender.colorPath),
             borderRadius: BorderRadius.circular(22.0),
           ),
         ),

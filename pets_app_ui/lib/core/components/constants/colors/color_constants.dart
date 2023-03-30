@@ -15,12 +15,15 @@ enum ColorEnum {
   purpleCabbage("#40339D"),
   honoluluBlue("#007EC4"),
   peachBud("#FAAFAE"),
-  frozenSalmon("#FFAB90");
+  frozenSalmon("#FFAB90"),
+  zumthorapprox("#e6f0ff"),
+  dodgerBlue("#3E89FB"),
+  alto("#d8d8d8");
 
   final String hexCode;
   const ColorEnum(this.hexCode);
 }
 
 extension ColorPathExtension on ColorEnum {
-  Color get colorPath => HexColor("${this.hexCode}");
+  Color get colorPath => HexColor(hexCode);
 }

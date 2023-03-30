@@ -1,14 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:pets_app_ui/core/components/constants/colors/color_constants.dart';
+import 'package:pets_app_ui/products/components/widgets/decoration_constants_view.dart';
+
+import 'border_radius_widget.dart';
 
 class InputTextFieldWidget extends TextFormField {
   InputTextFieldWidget(
-      {required this.controller,
+      {this.obscureText,
+      this.isSearchField = false,
+      required this.controller,
       required this.prefixIcon,
       required this.hintText,
       super.key})
       : super(
-          style: TextStyle(
+          obscureText: obscureText ?? false,
+          style: const TextStyle(
             fontFamily: 'Nunito',
             color: Color(0xff1e2843),
             fontSize: 16,
@@ -16,21 +22,34 @@ class InputTextFieldWidget extends TextFormField {
             fontStyle: FontStyle.normal,
           ),
           decoration: InputDecoration(
-            prefixIcon: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                decoration: BoxDecoration(
-                    color: ColorEnum.peachBud.colorPath,
-                    borderRadius: BorderRadius.circular(26)),
-                child: Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: Icon(prefixIcon, color: ColorEnum.black.colorPath),
-                ),
-              ),
-            ),
+            hintText: hintText,
+            prefixIcon: isSearchField ? null : _buildIconWidget(prefixIcon),
+            suffixIcon: isSearchField ? _buildIconWidget(prefixIcon) : null,
           ),
         );
+
+  static Align _buildIconWidget(IconData prefixIcon) {
+    return Align(
+      widthFactor: 1.0,
+      heightFactor: 1.0,
+      child: Padding(
+        padding: const EdgeInsets.only(left: 5, right: 10),
+        child: Container(
+          decoration: BoxDecorationConstants(
+              color: ColorEnum.peachBud.colorPath,
+              borderRadius: BorderConstants.circularRadiusNormal),
+          child: Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: Icon(prefixIcon, color: ColorEnum.black.colorPath),
+          ),
+        ),
+      ),
+    );
+  }
+
   final String hintText;
   final IconData prefixIcon;
+  final bool? obscureText;
+  final bool isSearchField;
   final TextEditingController controller;
 }

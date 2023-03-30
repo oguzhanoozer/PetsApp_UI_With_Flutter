@@ -21,13 +21,17 @@ class StringConstants {
 
   final String userNameOrEmailText = "Username or Email";
 
+  final String passwordText = "Password123!";
+
   final String forgotPasswordText = "Forgot Password?";
 
   final String orLoginWithText = "or login with";
 
   final String signUpText = "Signup";
 
-  final String createNewAccountText = "create new an account";
+  final String signUpSplittedText = "Sign Up";
+
+  final String createNewAccountText = "create new an account ?";
 
   final String createNewAccountWithBigText = "Create new an account";
 
@@ -58,4 +62,10 @@ class StringConstants {
   final String nearYourText = "Near Your";
 
   final String favouritesText = "Favourites";
+
+  final String exampleParagraph1 =
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.";
+
+  final String exampleParagraph2 =
+      "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.";
 }
